@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>
+        {% if is_dead_list %}{{ previous_round_name }}{% else %}{{ round_name }}{% endif %}
+    </title>
+</head>
+<body class="{% if is_dead_list %}dead-list{% endif %}">
+  <div class="container">
+    <header>
+      <h1>
+        {% if is_dead_list %}{{ previous_round_name }}{% else %}{{ round_name }}{% endif %}
+      </h1>
+    </header>
+
+    <section class="card">
+      <div class="round-content">
+        {% if is_dead_list %}
+          <div class="pre-wrap">{{ round_description }}</div>
+        {% else %}
+          {{ round_description | safe }}
+        {% endif %}
+      </div>
+
+      <div class="controls">
+        <form action="{{ url_for('get_next_round') }}" method="get">
+          <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

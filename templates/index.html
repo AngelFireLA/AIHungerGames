@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>AI Hunger Games Simulator</title>
+</head>
+<body>
+<h1>AI Hunger Games Simulator</h1>
+
+    <form action="{{ url_for('get_next_round') }}" method="get">
+        <button type="submit">Start</button>
+    </form>
+</body>
+</html>

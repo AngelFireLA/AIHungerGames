@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <title>{% if winner %}Winner: {{ winner }}{% else %}No Victor{% endif %}</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Game Over</h1>
+    </header>
+
+    <section class="card winner-card">
+        <div class="winner-hero">
+          {% if winner %}
+            <p class="subtitle">
+              The victor is<span class="winner-name">{{ winner }}</span>
+            </p>
+          {% else %}
+            <p class="subtitle">No victor</p>
+            <h2 class="winner-name">All tributes have fallen</h2>
+          {% endif %}
+        </div>
+
+
+      {% if fallen %}
+        <div class="fallen-list">
+          <h3>Final casualties</h3>
+          <ul>
+            {% for name in fallen %}
+              <li><span class="tribute dead">{{ name }}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      <div class="recap">
+        <h3>Recap</h3>
+        <pre class="pre-wrap">{{ recap }}</pre>
+      </div>
+
+      <div class="controls cta-group">
+        <form action="{{ url_for('index') }}" method="get">
+          <button type="submit" class="btn btn-primary">Start a new simulation</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
