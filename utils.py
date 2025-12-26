@@ -219,7 +219,7 @@ def generate_tributes_string(tributes):
     return tributes_string
 
 
-def generate_text(user_prompt, system_prompt, model="gemini-3.0-flash-preview"):
+def generate_text(user_prompt, system_prompt, model="gemini-3-flash-preview"):
     config = types.GenerateContentConfig(
         system_instruction=system_prompt,
         response_mime_type='application/json',
