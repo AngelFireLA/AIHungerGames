@@ -17,16 +17,16 @@ Session(app)
 rounds = ["Bloodbath", "Day 1", "Night 1", "Day 2", "Night 2", "Day 3", "Night 3", "Day 4", "Night 4", "Day 5", "Night 5", "Day 6", "Night 6", "Day 7", "Night 7", "Day 8", "Night 8", "Day 9", "Night 9", "Day 10", "Night 10", "Day 11", "Night 11", "Day 12", "Night 12", "Day 13", "Night 13"]
 
 test_tributes = [
-    Tribute("Alex", "male", None, 0),
-    Tribute("Lorenzo", "male", None, 0),
-    Tribute("Dominik", "femboy", None, 0),
-    Tribute("Lysandre", "male", None, 0),
-    Tribute("Xynkaz", "male", None, 0),
-    Tribute("Lola", "female", None, 0),
-    Tribute("AKA", "male", None, 0),
-    Tribute("Bunkor", "male", None, 0),
-    Tribute("Taka", "male", None, 0),
-    Tribute("Zettroz", "male", None, 0),
+    Tribute("A", "male", None, 0),
+    Tribute("B", "male", None, 0),
+    Tribute("C", "femboy", None, 0),
+    Tribute("D", "male", None, 0),
+    Tribute("E", "male", None, 0),
+    Tribute("F", "female", None, 0),
+    Tribute("G", "male", None, 0),
+    Tribute("H", "male", None, 0),
+    Tribute("I", "male", None, 0),
+    Tribute("J", "male", None, 0),
 ]
 
 # Keep an immutable copy of the starting lineup for resets and final page
